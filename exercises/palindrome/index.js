@@ -6,7 +6,21 @@
 // --- Examples:
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
-
-function palindrome(str) {}
+function palindrome(str) {
+  return str === str.split("").reduce((rev, char) => char + rev, "");
+}
+function palindrome(str) {
+  // length of str
+  let strL = str.length;
+  // counter
+  let count = 0;
+  while (count < Math.floor(strL / 2)) {
+    str[count] === str[strL];
+    count += 1;
+  }
+}
+// Test Zone
+string = "abba";
+console.log(palindrome(string));
 
 module.exports = palindrome;
